@@ -19,7 +19,7 @@
   <div class="landing-description">
     <h1>chenry</h1>
     <p>
-      Electronics engineer with 6 years experinece in the Biomedical, Aerospace,
+      Electronics engineer with 6 years experience in the Biomedical, Aerospace,
       automotive and Resources industry
     </p>
     <a href="/cases">View my Work</a>

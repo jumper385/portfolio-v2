@@ -2,7 +2,7 @@
   import { supabase } from "$lib/supabaseClient";
   export let data;
   import SvelteMarkdown from "svelte-markdown";
-  import Image from "../../renderers/Image.svelte";
+import ArticleDisplay from "../../components/ArticleDisplay.svelte";
 
   let liked = false;
   let likeButtonText = "Like";
@@ -33,14 +33,7 @@
     alt={`display photo for "${data.title}"`}
   />
 
-  <div class="markdown-body">
-    <SvelteMarkdown
-      renderers={{
-        image: Image,
-      }}
-      source={data.body}
-    />
-  </div>
+  <ArticleDisplay source={data.body}/>
 </div>
 
 <button on:click={addLike} class="like-button" disabled={liked}>{likeButtonText}</button>
