@@ -49,13 +49,16 @@
     gap: 24px;
   }
 
-  @media all and (max-width: 300px) {
+  @media all and (max-width: 500px) {
     nav {
       display: flex;
       flex-direction: column;
       margin: 0 auto;
       align-items: center;
       gap: 24px;
+    }
+    a.logo > img {
+      height:48pt;
     }
   }
 </style>
