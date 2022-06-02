@@ -102,6 +102,7 @@
 
   {#if uploadSuccess}
     <p>Link: <a href={fileLink}>Image Link</a></p>
+    <pre>{fileLink}</pre>
     <p>
       Markdown Code: <span>
         <pre>{`![__caption__](${fileLink})`}</pre>

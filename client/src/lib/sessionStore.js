@@ -6,12 +6,6 @@ export const blogDraft = writable({
     short_title:"",
     author:"",
     body:"",
+    display_photo:""
 })
 export const fileUpload = writable()
-
-// # Editor Generation
-
-// This is generated through the editor! It's super nice and has a realtime preview of the Markdown input; additionally, i've done it so that you can edit how the markdown displays i.e. the image below:
-
-// ![This image has a caption on the bottom that you enter through markdown](https://aznmknfzgxpvupoqbxbn.supabase.co/storage/v1/object/public/photos/blog-photos/editor-setup.png)
-
