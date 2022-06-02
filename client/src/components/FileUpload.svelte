@@ -20,8 +20,11 @@
         uploadSuccess = false;
         let file = $fileUpload[0];
         let fileExt = file.type.split("/")[1];
-        let fileName = `blog-photos/${nanoid()}.${fileExt}`;
-        console.log(file, fileExt, fileName)
+        let fileId = nanoid();
+        let fileName = `blog-photos/${fileId}.${fileExt}`;
+        console.table({
+          file, fileId, fileExt, fileName
+        })
 
         //Upload File
         let { data, error } = supabase.storage
