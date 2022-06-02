@@ -2,7 +2,6 @@
   import { supabase } from "$lib/supabaseClient";
   import { fileUpload } from "$lib/sessionStore";
   import { nanoid } from "nanoid";
-  import ArticleDisplay from "./ArticleDisplay.svelte";
 
   let isUploading = false;
   let uploadText = "Upload File";
@@ -16,11 +15,14 @@
 
     try {
       if ($fileUpload) {
+
         // Grab File Settings
         uploadSuccess = false;
         let file = $fileUpload[0];
         let fileExt = file.type.split("/")[1];
         let fileName = `blog-photos/${nanoid()}.${fileExt}`;
+        console.log(file, fileExt, fileName)
+
         //Upload File
         let { data, error } = supabase.storage
           .from("photos")
