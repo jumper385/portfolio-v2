@@ -10,6 +10,7 @@
   {/if}
   {#if $user}
     <a href="/upload">Upload File</a>
+    <a href="/admin/writeup">Create a Blog Article</a>
   {/if}
 </footer>
 
