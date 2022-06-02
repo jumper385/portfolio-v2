@@ -7,6 +7,7 @@ export const blogDraft = writable({
     author:"",
     body:"",
 })
+export const fileUpload = writable()
 
 // # Editor Generation
 

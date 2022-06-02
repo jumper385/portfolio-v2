@@ -2,6 +2,7 @@
   import {supabase} from '$lib/supabaseClient'
   import {blogDraft} from "$lib/sessionStore"
   import ArticleDisplay from "../../../components/ArticleDisplay.svelte";
+import FileUpload from '../../../components/FileUpload.svelte';
   
   let preview = false;
   let submitButtonText = "Submit"
@@ -75,6 +76,8 @@
   </div>
   {/if}
 </div>
+
+<FileUpload />
 
 <style>
   .form-row {
