@@ -1,6 +1,6 @@
 <script>
     import { supabase } from '$lib/supabaseClient'
-    import { user } from '$lib/sessionStore'
+    import { user, fileUpload } from '$lib/sessionStore'
   
     let loading = true
     let username = null
