@@ -35,6 +35,8 @@
           .upload(fileName, file);
         if (error) throw error;
         fileUpload.set({});
+        let uploadFileName;
+
 
         // Update Display Elements
         uploadText = "Uploaded!!! 😎";
