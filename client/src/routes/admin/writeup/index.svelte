@@ -53,6 +53,11 @@ import FileUpload from '../../../components/FileUpload.svelte';
         <label for="author">Author</label>
         <input type="text" bind:value={$blogDraft.author} required>
       </div>
+
+      <div class="form-element">
+        <label for="display photo">Display Photo [Link]</label>
+        <input type="text" bind:value={$blogDraft.display_photo} required>
+      </div>
     </div>
   
     <div class="form-row">
