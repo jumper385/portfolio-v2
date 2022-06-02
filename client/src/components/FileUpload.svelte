@@ -6,7 +6,7 @@
   let uploadText = "Upload File";
   let uploadSuccess = false;
   let fileLink = "";
-  let uploadFileName;
+  let uploadFileName = "";
 
   let isCopied = false;
   let copyButtonText = "Press to Copy";
@@ -22,7 +22,7 @@
         let file = $fileUpload[0];
         let fileExt = file.type.split("/")[1];
         let formattedFileName = uploadFileName.replace(/\s+/g, "_");
-        let fileName = `blog-photos/${formattedFileName}.${fileExt}`;
+        let fileName = `blog-photos/${formattedFileName}--${Date.now()}.${fileExt}`;
         console.table({
           file,
           fileExt,
@@ -35,7 +35,7 @@
           .upload(fileName, file);
         if (error) throw error;
         fileUpload.set({});
-        let uploadFileName;
+        uploadFileName = "";
 
 
         // Update Display Elements
