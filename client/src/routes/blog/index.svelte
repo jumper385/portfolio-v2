@@ -45,7 +45,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 24pt;
-    grid-column-gap: 24pt
+    grid-column-gap: 24pt;
+    margin:24pt 64pt;
   }
 
   .info-holder {
