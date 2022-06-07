@@ -64,3 +64,16 @@
         </div>
     </div>
 </form>
+
+<style>
+    form {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    @media all and (max-width:500px) {
+        form {
+            padding:12pt;
+            box-sizing: border-box;
+        }
+    }
+</style>
