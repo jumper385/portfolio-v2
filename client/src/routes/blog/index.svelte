@@ -13,10 +13,12 @@
   {:then { data }}
     {#each data as item}
       <div class="blog-entry">
-        <img
-          src={item.display_photo}
-          alt={`display photo for "${item.title}"`}
-        />
+        <a href="/blog/{item.id}">
+          <img
+            src={item.display_photo}
+            alt={`display photo for "${item.title}"`}
+          />
+        </a>
         <div class='info-holder'>
           <a href="/blog/{item.id}">
             <p>[{item.title}]</p>
@@ -36,7 +38,7 @@
     align-items: center;
   }
 
-  .blog-entry > img {
+  .blog-entry > a > img {
     max-width: 100%;
     max-height: 300px;
   }
