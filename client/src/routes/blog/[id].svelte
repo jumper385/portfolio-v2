@@ -1,7 +1,12 @@
+<svelte:head>
+  <meta charset="utf-8">
+  <meta name="author" content={data.author}>
+  <meta property="og:image" content={data.display_photo}>
+</svelte:head>
+
 <script>
   import { supabase } from "$lib/supabaseClient";
   export let data;
-  import SvelteMarkdown from "svelte-markdown";
 import ArticleDisplay from "../../components/ArticleDisplay.svelte";
 
   let liked = false;
@@ -21,6 +26,8 @@ import ArticleDisplay from "../../components/ArticleDisplay.svelte";
     }
   };
 </script>
+
+<title>{data.title}</title>
 
 <div class="blog-container">
   <h1 style="text-align:center">{data.title}</h1>
