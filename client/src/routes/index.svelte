@@ -23,7 +23,7 @@
         Electronics engineer with 6 years experience in the Biomedical, Aerospace,
         automotive and Resources industry
       </p>
-      <a href="/cases">View my Work</a>
+      <a href="/blog">View my Work</a>
     </div>
   </section>
   
