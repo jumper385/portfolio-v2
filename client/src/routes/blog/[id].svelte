@@ -56,6 +56,8 @@ import ArticleDisplay from "../../components/ArticleDisplay.svelte";
   @media all and (max-width: 500px) {
     .blog-container {
       width: 100%;
+      padding:12pt;
+      box-sizing: border-box;
     }
     img.display-picture {
       max-width: 100%;
