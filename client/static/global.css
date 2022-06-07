@@ -1,3 +1,7 @@
+html {
+    font-family: "Computer Modern Serif", serif;
+  }
+
 .markdown-body img {
     max-width: 500px;
 }
