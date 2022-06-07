@@ -1,6 +1,10 @@
 html {
     font-family: "Computer Modern Serif", serif;
-  }
+}
+
+pre, code {
+    font-family: "Computer Modern Typewriter", monospace;
+}
 
 .markdown-body img {
     max-width: 500px;
