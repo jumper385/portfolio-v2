@@ -61,6 +61,7 @@
     .blog-container {
       display: grid;
       grid-template-columns: 1fr;
+      margin:0;
     }
   }
 </style>
