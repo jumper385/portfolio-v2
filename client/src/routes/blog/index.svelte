@@ -1,7 +1,7 @@
 <script>
   import { supabase } from "$lib/supabaseClient";
   const blogItems = async () => {
-    return supabase.from("blog");
+    return supabase.from("blog").select("*").order('created_at', {ascending:false});
   };
 </script>
 
@@ -13,16 +13,20 @@
   {:then { data }}
     {#each data as item}
       <div class="blog-entry">
+
+        <div style="padding:12pt; box-sizing: 0 auto; text-align:center;" class="card-heading">
+          <p>{item.title}</p>
+        </div>
+
         <a href="/blog/{item.id}">
           <img
             src={item.display_photo}
             alt={`display photo for "${item.title}"`}
           />
         </a>
+        
         <div class='info-holder'>
-          <a href="/blog/{item.id}">
-            <p>[{item.title}]</p>
-          </a>
+          <p>{(new Date(item.created_at)).getDate()}/{(new Date(item.created_at)).getMonth()}/{(new Date(item.created_at)).getFullYear()}</p>
           <p><i class="fa-solid fa-thumbs-up" /> {item.likes}</p>
         </div>
       </div>
