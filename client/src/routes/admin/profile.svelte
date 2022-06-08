@@ -5,6 +5,7 @@
   let profile = {};
   let password = {};
   let loading = false;
+  let updateButtonText = "Update Profile ⬆️"
 
   async function getProfile() {
     try {
@@ -35,6 +36,7 @@
   async function updateProfile() {
     try {
       loading = true;
+      updateButtonText = "Updating ⌛"
       const user = supabase.auth.user();
 
       if (password.newPassword && password.newPassword == password.confirmPassword) {
@@ -50,12 +52,13 @@
       if (profileError) throw profileError;
 
       console.log(profileUpdate);
-
+      updateButtonText = "Updated Profile 😎"
     } catch (error) {
       alert(error.message);
-      console.log(error);
+      updateButtonText = `Error 🥵: ${error.message}`
     } finally {
       loading = false;
+      updateButtonText = "Updated Profile 😎"
     }
   }
 
@@ -110,7 +113,7 @@
     </div>
     <div class="form-row">
       <div class="form-element">
-        <input type="submit" value={"Update Profile"} />
+        <input type="submit" value={updateButtonText} />
       </div>
     </div>
   </form>
