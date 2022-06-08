@@ -66,7 +66,9 @@
     try {
       loading = true;
       let { error } = await supabase.auth.signOut();
-      if (error) throw error;
+      user.set()
+      goto('/')
+      if (error) throw errors
     } catch (error) {
       alert(error.message);
     } finally {
@@ -114,6 +116,9 @@
     <div class="form-row">
       <div class="form-element">
         <input type="submit" value={updateButtonText} />
+      </div>
+      <div class="form-element">
+        <button on:click={signOut}>Log-Out</button>
       </div>
     </div>
   </form>

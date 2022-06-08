@@ -3,6 +3,7 @@
   import {user} from '$lib/sessionStore'
   import Footer from "../components/Footer.svelte";
   import Navbar from "../components/Navbar.svelte";
+  import {goto} from '$app/navigation'
 
   user.set(supabase.auth.user());
 
@@ -11,6 +12,8 @@
     switch(event) {
       case "PASSWORD_RECOVERY": 
         console.log(session, 'recovering...')
+      case "SIGNED_OUT": 
+        goto('/')
       default:
         user.set(session.user);
     }
