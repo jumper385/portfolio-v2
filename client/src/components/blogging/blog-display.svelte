@@ -5,7 +5,7 @@
 
 <title>{data.title}</title>
 
-<div >
+<div class="blog-container">
     <h1 style="text-align:center">{data.title}</h1>
     <p style="text-align:center">{data.created_at}</p>
     <div class="photo-container">
@@ -20,6 +20,10 @@
 </div>
 
 <style>
+  .blog-container {
+    max-width:960px;
+    margin:0 auto;
+  }
   .photo-container {
     width:100%;
     display: flex;
