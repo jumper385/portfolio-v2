@@ -9,7 +9,7 @@
       alt="gold metal ball and blue metal ball behind it"
     /></a
   >
-  <div>
+  <div class='link-container'>
     <a href="/">Home</a>
     <a href="/blog">Blog</a>
     <a href="/contact">Contact</a>
@@ -25,41 +25,35 @@
 </nav>
 
 <style>
-  .logo > img {
-    height: 64pt;
-  }
-
   nav {
-    display: flex;
+    display:flex;
     flex-direction: column;
-    margin: 0 auto;
+    gap:12pt;
+    font-size:medium;
     align-items: center;
-    gap:12px
+    margin: 24pt 0;
   }
-
-  .socials {
-    font-weight: 400;
-    font-size: 24pt;
-    line-height: 24pt;
-    color: #264653;
+  .logo > img{
+    width:64pt;
   }
-
+  .link-container {
+    display: flex;
+    gap:24pt;
+    text-transform: uppercase;
+  }
+  .link-container > a {
+    font-weight:600;
+    text-decoration: none;
+    color:black;
+    letter-spacing: 0.12em;
+  }
   .socials-container {
     display: flex;
-    gap: 24px;
+    gap:24pt;
   }
-
-  @media all and (max-width: 500px) {
-    nav {
-      display: flex;
-      flex-direction: column;
-      margin: 0 auto;
-      align-items: center;
-      gap: 24px;
-    }
-    a.logo > img {
-      height:48pt;
-    }
+  .socials-container > a{
+    font-size: x-large;
+    color: #264653
   }
 </style>
 

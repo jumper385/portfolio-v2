@@ -1,9 +1,5 @@
 html {
-    font-family: "Computer Modern Serif", serif;
-}
-
-pre, code {
-    font-family: "Computer Modern Typewriter", monospace;
+    font-family: 'Inter', sans-serif;
 }
 
 .markdown-body img {
