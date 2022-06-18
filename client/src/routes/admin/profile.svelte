@@ -127,6 +127,10 @@
 {/if}
 
 <style>
+  form {
+    max-width:960px;
+    margin:0 auto;
+  }
   .form-row {
     margin-top: 12pt;
     width: 100%;
